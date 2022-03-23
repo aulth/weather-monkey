@@ -11,17 +11,7 @@ const Home = () => {
         setCity(e.target.value);
         getWeather(e.target.value);
     }
-    const getLocation = ()=>{
-        if(navigator.geolocation){
-            navigator.geolocation.getCurrentPosition((position)=>{
-                console.log(position);
-            })
-        }
-    }
-    useEffect(() => {
-      getLocation();
-      console.log(process.env.REACT_APP_API)
-    }, [])
+    
     return (
         <>
             <div style={{ minHeight: 'calc(100vh - 44px)' }} className="md:flex-row flex flex-col w-full box-border bg-gray-600 p-1">
